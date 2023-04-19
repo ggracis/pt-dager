@@ -1,0 +1,1 @@
+export default function(e){const t=SEMICOLON.Core;if((e=t.getSelector(e,!1)).length<1)return!0;e.forEach(e=>{let t=e.querySelectorAll(".portfolio-item");t.forEach(e=>{let t=e.querySelector(".portfolio-desc");setTimeout(()=>{t.style.marginTop="-"+t.offsetHeight+"px"},1e3)}),e.classList.contains("has-init-isotope")&&e.isotope("layout")})}

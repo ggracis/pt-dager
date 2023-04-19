@@ -1,0 +1,119 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Handling Updates
+-----------------------------------------------------------------*/
+
+h1 {
+  font-family: "Space Mono", monospace;
+  color: white;
+  padding: 0rem 3rem;
+  border-radius: 1rem;
+  font-weight: 800;
+}
+
+h1:hover {
+  background-color: white;
+  color: black;
+}
+
+.page-menu-item.current > a {
+  background-color: white;
+  color: black;
+}
+
+@media only screen and (max-width: 576px) {
+  h1 {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+  h1 {
+    font-size: 4.25rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #form-contacto,
+  .boton-contacto-pc {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  #form-contacto-celu,
+  .boton-contacto-celu {
+    display: none;
+  }
+}
+
+#form-contacto-celu {
+  display: none;
+  position: fixed;
+  top: 0;
+  background-color: #141414;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+#form-contacto-celu-cerrar {
+  position: absolute;
+  right: 1vw;
+  color: #fff;
+  font-weight: 800;
+  z-index: 55;
+}
+
+.redes-sociales a {
+  color: #fff;
+  transition: color 0.5s;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -ms-transition: color 0.5s;
+  -o-transition: color 0.5s;
+}
+
+.redes-sociales a:hover {
+  color: #ec008b;
+}
+
+.top-image {
+  z-index: 1;
+}
+
+.bottom-image {
+  z-index: 0;
+}
+
+.bottom-image:hover {
+  z-index: 2;
+}
+
+.owl-item .oc-item:hover {
+  box-shadow: 0 0.5em 0.5em -0.4em #ec008b80;
+  transform: translateY(-0.75em);
+  -webkit-transform: translateY(-0.75em);
+  -moz-transform: translateY(-0.75em);
+  -ms-transform: translateY(-0.75em);
+  -o-transform: translateY(-0.75em);
+}

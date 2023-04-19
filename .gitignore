@@ -1,0 +1,13 @@
+# Carpeta node_modules
+node_modules/
+
+# Archivos de registro
+logs
+*.log
+
+# Carpeta build
+build/
+
+# Archivos de configuración
+.env
+config.js

@@ -1,0 +1,91 @@
+ <!-- Footer
+		============================================= -->
+   
+   
+    </div>
+    <!-- #wrapper end -->
+
+    <!-- Subir arriba :)
+	============================================= -->
+    <div id="gotoTop" class="uil uil-angle-up"></div>
+
+    <!-- JavaScripts
+	============================================= -->
+    <script src="js/jquery.js"></script>
+    <script src="js/functions.js"></script>
+
+    <!-- Parallax Script
+	============================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script>
+      !SEMICOLON.Mobile.any() && skrollr.init({ forceHeight: false });
+    </script>
+
+    <script>
+      /* Efecto letras */
+     const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        let interval = null;
+
+        document.querySelector("h1").onmouseover = event => {  
+        let iteration = 0;
+        
+        clearInterval(interval);
+        
+        interval = setInterval(() => {
+            event.target.innerText = event.target.innerText
+            .split("")
+            .map((letter, index) => {
+                if(index < iteration) {
+                return event.target.dataset.value[index];
+                }
+            
+                return letters[Math.floor(Math.random() * 26)]
+            })
+            .join("");
+            
+            if(iteration >= event.target.dataset.value.length){ 
+            clearInterval(interval);
+            }
+            
+            iteration += 1 / 3;
+        }, 30);
+        }
+    </script>
+
+<script>
+  function isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  }
+
+  const botonesContacto = document.querySelectorAll('.boton-contacto');
+  const formContactoCelu = document.getElementById('form-contacto-celu');
+  const botonCerrarForm = document.getElementById('form-contacto-celu-cerrar');
+
+  // Agregar lógica para mantener o eliminar el atributo data-href según si es un dispositivo móvil o no
+  botonesContacto.forEach(function(botonContacto) {
+    if (isMobile()) {
+      botonContacto.removeAttribute('data-href');
+    } else {
+      botonContacto.setAttribute('data-href', '#contacto');
+    }
+  });
+
+  botonesContacto.forEach(function(botonContacto) {
+    botonContacto.addEventListener('click', function() {
+      if (isMobile()) {
+        formContactoCelu.style.display = 'block';
+      }
+    });
+  });
+
+  botonCerrarForm.addEventListener('click', function() {
+    console.log('cerrar');
+    formContactoCelu.style.display = 'none';
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>;
+
+<script src="/enviarCorreo.js"></script>
+</body>
+</html>

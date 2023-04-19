@@ -1,0 +1,496 @@
+<%- include ("partials/head", {pageTitle: "👨🏻‍💻 Gastón Gracis 💻"}) %>
+
+<body class="stretched">
+  <!-- Document Wrapper
+	============================================= -->
+  <div id="wrapper">
+    <%- include ("partials/header") %>
+
+    <div id="form-contacto-celu">
+      <a href="#" id="form-contacto-celu-cerrar">X</a>
+      <div class="form-widget" data-loader="button">
+        <div class="row">
+          <div class="col-12 form-group mb-4">
+            <div class="heading-block mb-0 border-bottom-0">
+              <h4>¿Tenés una idea? Charlemos</h4>
+            </div>
+          </div>
+          <div class="col-12 form-group">
+            <input
+              type="text"
+              name="nombre-celu"
+              id="nombre-celu"
+              class="form-control required form-control-md not-dark"
+              value=""
+              placeholder="Nombre*"
+            />
+          </div>
+          <div class="col-12 form-group">
+            <input
+              type="email"
+              name="email-celu"
+              id="email-celu"
+              class="form-control required form-control-md not-dark"
+              value=""
+              placeholder="Email*"
+            />
+          </div>
+          <div class="col-12 form-group">
+            <textarea
+              id="mensaje-celu"
+              name="mensaje-celu"
+              class="form-control form-control-md not-dark"
+              placeholder="Escriba sus comentarios aquí"
+            ></textarea>
+          </div>
+          <div class="col-12 form-group">
+            <div id="form-result-celu"></div>
+            <a
+              href="#"
+              id="enviar-formulario-celu"
+              class="button text-uppercase fw-semibold button-large button-white button-gradient m-0"
+              >Pongámonos en contacto</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Intro
+		============================================= -->
+    <section
+      id="contacto"
+      class="slider-element min-vh-60 min-vh-md-100 include-header"
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+          url('/images/fondo_1.jpg') no-repeat center center / cover;
+      "
+    >
+      <div class="slider-inner">
+        <div class="vertical-middle">
+          <div class="container dark py-5 py-md-0">
+            <div class="row justify-content-between mt-5 col-mb-50">
+              <div
+                class="col-lg-6 col-sm-12 parallax"
+                data-0="transform: translateY(70px); opacity: 1"
+                data-300="transform: translateY(200px); opacity: 0"
+              >
+                <h1 data-value="GASTÓN_GRACIS">GASTÓN_GRACIS</h1>
+                <p class="text-center display-6 fw-bold font-primary">
+                  <span
+                    class="text-rotater nocolor"
+                    data-separator="|"
+                    data-rotate="fadeIn"
+                    data-speed="60"
+                    data-backdelay="1800"
+                    data-typed="true"
+                    data-shuffle="true"
+                    data-loop="true"
+                  >
+                    <span class="t-rotate">
+                      Desarrollador web|Creativo|Desarrollador
+                      Frontend|Diferente|Diseñador UX/UI|Diseñador
+                      multimedial|Analista SEO|Desarrollador Full
+                      Stack|Desarrollador WordPress
+                    </span>
+                  </span>
+                </p>
+                <div class="redes-sociales text-center display-6 fw-bold">
+                  <a
+                    href="https://www.linkedin.com/in/gastongracis/"
+                    target="_blank"
+                    title="LinkedIn"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a
+                    href="https://github.com/ggracis/"
+                    target="_blank"
+                    title="GitHub"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a
+                    href="https://www.instagram.com/gaston.gracis/"
+                    target="_blank"
+                    title="Instagram"
+                    ><i class="fab fa-instagram"></i
+                  ></a>
+                  <a
+                    href="mailto:gastongracis@gmail.com?subject=Hola%20Gastón!"
+                    title="Email"
+                    ><i class="far fa-envelope"></i
+                  ></a>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=5491154184271&text=Hola%20Gastón!"
+                    target="_blank"
+                    title="WhatsApp"
+                    ><i class="fab fa-whatsapp"></i
+                  ></a>
+                  <a
+                    href="https://t.me/Tonga87AR?start=Hola%20Gastón!"
+                    target="_blank"
+                    title="Telegram"
+                    ><i class="fab fa-telegram"></i
+                  ></a>
+                </div>
+              </div>
+
+              <div
+                id="form-contacto"
+                class="col-lg-6 col-sm-12 d-flex align-items-lg-end flex-column parallax text-start text-lg-end mb-5 mb-lg-0"
+                data-0="transform: translateY(0px)"
+                data-700="transform: translateY(-50px)"
+              >
+                <div class="form-widget" data-loader="button">
+                  <div class="row">
+                    <div class="col-12 form-group mb-4">
+                      <div class="heading-block mb-0 border-bottom-0">
+                        <h2>¿Tenés una idea? Charlemos</h2>
+                      </div>
+                    </div>
+                    <div class="col-12 form-group">
+                      <input
+                        type="text"
+                        name="nombre"
+                        id="nombre"
+                        class="form-control required form-control-md not-dark"
+                        value=""
+                        placeholder="Nombre*"
+                        required="required"
+                      />
+                    </div>
+                    <div class="col-12 form-group">
+                      <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        class="form-control required form-control-md not-dark"
+                        value=""
+                        placeholder="Email*"
+                        required="required"
+                      />
+                    </div>
+                    <div class="col-12 form-group">
+                      <textarea
+                        id="mensaje"
+                        name="mensaje"
+                        class="form-control form-control-md not-dark"
+                        placeholder="Escriba sus comentarios aquí"
+                        required="required"
+                      ></textarea>
+                    </div>
+                    <div class="col-12 form-group mb-0">
+                      <div class="form-result" id="form-result"></div>
+                      <button
+                        type="submit"
+                        id="enviar-formulario"
+                        name="enviar-formulario"
+                        class="botonEnviarForm button text-uppercase fw-semibold button-xlarge button-white button-gradient m-0"
+                      >
+                        Pongámonos en contacto
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- #Slider end -->
+
+    <!-- Contenido
+		============================================= -->
+    <section id="content" style="background-color: #000">
+      <div class="content-wrap pt-0" style="overflow: visible">
+        <!-- Acerca de mí
+				============================================= -->
+        <div
+          id="acerca-de-mi"
+          class="section page-section bg-transparent pt-0 mb-0"
+        >
+          <div class="container">
+            <div class="mb-5 dark">
+              <span class="display-4 fw-bold gradient-underline font-primary">
+                Acerca de mí
+              </span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="row justify-content-around dark mb-4">
+              <div class="col-lg-6 col-md-4 col-sm-12">
+                <h4 class="font-body ls-1 text-uppercase">En el trabajo</h4>
+                <h5>
+                  Diseño soluciones digitales a medida para startups, marcas y
+                  emprendedores con proyectos geniales. Con experiencia en
+                  diseño UX/UI, desarrollo web y diseño multimedial, puedo
+                  ayudarte a llevar tu proyecto al siguiente nivel.
+                </h5>
+                <p class="text-white-50">
+                  Como desarrollador web y diseñador UX/UI, me gusta entender
+                  los problemas y objetivos de mis clientes antes de empezar a
+                  crear. A partir de ahí, diseño interfaces visuales que
+                  atraigan a los usuarios y les brinden una experiencia única.
+                  Me encanta trabajar en proyectos que me permitan combinar mi
+                  pasión por el diseño gráfico y la multimedia con el desarrollo
+                  web. Siempre busco crear soluciones digitales efectivas y
+                  atractivas. Soy fanático de automatizar tareas y optimizar
+                  procesos.
+                </p>
+                <p class="text-white-50">
+                  En mi trabajo actual me encanta innovar en las soluciones, no
+                  repetir lo que ya se hizo. Me gusta trabajar en equipo,
+                  aprender de los demás y compartir mis conocimientos.
+                </p>
+              </div>
+
+              <div class="col-lg-5 col-md-4 col-sm-12">
+                <div class="about-img position-relative">
+                  <div class="my-3 my-lg-0 top-image">
+                    <div class="gradient-bg">
+                      <img
+                        src="/images/tonga_job_1.jpg"
+                        alt="Gastón Gracis, posando para la foto de legajo"
+                        title="Gastón Gracis, posando para la foto de legajo"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    data-0="top: 160px"
+                    data-end="top: 120px"
+                    class="bottom-image"
+                  >
+                    <div class="gradient-bg">
+                      <img
+                        src="/demos/conference/images/about/1.jpg"
+                        alt="About Image"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="clear"></div>
+
+            <div class="row justify-content-around dark mb-4">
+              <div class="col-lg-5 col-md-4 col-sm-12">
+                <div class="about-img position-relative">
+                  <div class="my-3 my-lg-0 top-image">
+                    <div class="gradient-bg">
+                      <img
+                        src="/images/tonga_1.jpg"
+                        alt="Tónga tomando mate en el sur"
+                        title="Tónga tomando mate en el sur"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    data-0="top: 160px"
+                    data-end="top: 120px"
+                    class="bottom-image"
+                  >
+                    <div class="gradient-bg">
+                      <img
+                        src="/images/tonga_2.jpg"
+                        alt="Tónga mirando el Lago Futalaufquen"
+                        title="Tónga mirando el Lago Futalaufquen"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6 col-md-4 col-sm-12 mt-4">
+                <h4 class="font-body ls-1 text-uppercase">En la vida</h4>
+                <h5>
+                  Soy al que llaman cuando algo no funciona, siempre estoy
+                  dispuesto a dar una mano, ya sea en una mudanza o en un
+                  emprendimiento familiar. Me encanta la tecnología y la
+                  innovación, y me gusta estar al tanto de las últimas
+                  tendencias en el mundo del diseño y desarrollo web. También
+                  disfruto viajar y conocer nuevas culturas.
+                </h5>
+                <p class="text-white-50">
+                  Actualmente lidero un equipo de crecimiento en mi iglesia
+                  local, doy charlas sobre tecnología y diseño, y me gusta
+                  ayudar a los demás a alcanzar sus metas.
+                  <em>Estoy convencido de que nunca dejamos de aprender.</em>
+                  Como hobby, me encuentro trabajando en un proyecto de máquinas
+                  CNC con la ambición de crear una máquina de bajo costo que
+                  genere fuentes de trabajo.
+                </p>
+              </div>
+              <div style="height: 100px"></div>
+            </div>
+          </div>
+        </div>
+        <!-- #Acerca de mí fin -->
+        <div class="clear"></div>
+
+        <!-- Carrousel de skills
+            ============================================= -->
+        <div
+          id="oc-skills"
+          class="owl-carousel owl-carousel-full image-carousel carousel-widget owl-loaded owl-drag text-white-50"
+          data-margin="30"
+          data-loop="true"
+          data-nav="false"
+          data-autoplay="5000"
+          data-pagi="false"
+          data-items-xs="4"
+          data-items-sm="5"
+          data-items-md="6"
+          data-items-lg="7"
+          data-items-xl="8"
+          style="padding: 30px 0"
+        >
+          <div class="owl-stage-outer">
+            <div
+              class="owl-stage"
+              style="
+                transform: translate3d(-2485px, 0px, 0px);
+                transition: all 0.25s ease 0s;
+                width: 7733px;
+              "
+            >
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-github display-2" title="Git"></i>
+                  <h5 class="text-white-50">Git</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-react display-2" title="ReactJS"></i>
+                  <h5 class="text-white-50">ReactJS</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-html5 display-2" title="HTML5"></i>
+                  <h5 class="text-white-50">HTML5</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-css3-alt display-2" title="CSS3"></i>
+                  <h5 class="text-white-50">CSS3</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-js display-2" title="JavaScript"></i>
+                  <h5 class="text-white-50">JavaScript</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-php display-2" title="PHP"></i>
+                  <h5 class="text-white-50">PHP</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fab fa-bootstrap display-2" title="Bootstrap"></i>
+                  <h5 class="text-white-50">Bootstrap</h5>
+                </div>
+              </div>
+
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i class="fas fa-database display-2" title="MySQL"></i>
+                  <h5 class="text-white-50">MySQL</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i
+                    class="fa-regular fa-window-restore display-2"
+                    title="UX/UI"
+                  ></i>
+                  <h5 class="text-white-50">UX/UI</h5>
+                </div>
+              </div>
+
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i
+                    class="fa-solid fa-book-open display-2"
+                    title="InDesign"
+                  ></i>
+                  <h5 class="text-white-50">InDesign</h5>
+                </div>
+              </div>
+              <div class="owl-item">
+                <div class="oc-item text-center">
+                  <i
+                    class="fa-solid fa-bezier-curve display-2"
+                    title="Illustrator"
+                  ></i>
+                  <h5 class="text-white-50">Illustrator</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- #Carrousel de skills fin -->
+
+        <div class="clear"></div>
+        <!-- Proyectos
+				============================================= -->
+        <%- include ("partials/proyectos") %>
+        <!-- #Proyectos fin -->
+
+        <div class="clear"></div>
+
+        <!-- Remate
+				============================================= -->
+        <div
+          id="remate-proyectos"
+          class="section page-section bg-transparent pt-0 mt-6 mb-0 pb-4"
+        >
+          <div class="container">
+            <div
+              class="mx-auto schedule-wrap text-center dark rounded shadow-lg"
+              style="max-width: 1050px; background-color: #000"
+            >
+              <h3 class="gradient-text">
+                Como veras, soy una persona curiosa y me encanta aprender cosas
+                nuevas todo el tiempo.
+              </h3>
+              <p class="mx-auto text-muted" style="max-width: 600px">
+                ¿Tenes algún proyecto en el que pueda sumarme? <br />¡Sería
+                genial charlar sobre cómo puedo aportar en tu equipo!
+              </p>
+              <a
+                href="#"
+                data-href="#contacto"
+                class="boton-contacto button ls-1 text-uppercase fw-semibold button-xlarge button-white button-gradient mt-4"
+                >Charlemos</a
+              >
+            </div>
+          </div>
+          <div
+            class="dotted-bg"
+            style="
+              background: url('/demos/conference/images/dotted-bg.svg') repeat
+                center center / contain;
+              min-height: 25%;
+              top: 90%;
+              right: 0;
+              left: auto;
+              width: 50%;
+            "
+          ></div>
+        </div>
+        <!-- #Clientes fin -->
+
+        <div class="clear"></div>
+      </div>
+    </section>
+    <!-- #content end -->
+
+    <%- include ("partials/footer") %>
+  </div>
+</body>
