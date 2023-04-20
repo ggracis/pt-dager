@@ -84,7 +84,7 @@ app.post("/contacto", (req, res, next) => {
   fs.appendFileSync(archivoContactos, tabla);
 
   let correo = {
-    from: "mailer@newdanger.com.ar",
+    from: "sender@newdanger.com.ar",
     to: "gastongracis@gmail.com",
     subject: "[CONTACTO]",
     html: `
