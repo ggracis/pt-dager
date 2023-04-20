@@ -11,3 +11,6 @@ build/
 # Archivos de configuración
 .env
 config.js
+
+# Archivo de contactos
+contactos.html
