@@ -1,4 +1,6 @@
 const express = require("express");
+const https = require("https");
+const http = require("http");
 const axios = require("axios");
 const Email = require("./mailer");
 const fs = require("fs"); // Agregamos el módulo fs para escribir en archivos
@@ -26,6 +28,36 @@ if (!fs.existsSync(archivoContactos)) {
 
 app.get("/", (req, res) => {
   res.render("index");
+});
+
+// Certificate for Domain 1
+const privateKey1 = fs.readFileSync(
+  "/etc/letsencrypt/live/www.gastongracis.dev/privkey.pem",
+  "utf8"
+);
+const certificate1 = fs.readFileSync(
+  "/etc/letsencrypt/live/www.gastongracis.dev/cert.pem",
+  "utf8"
+);
+const ca1 = fs.readFileSync(
+  "/etc/letsencrypt/live/www.gastongracis.dev/chain.pem",
+  "utf8"
+);
+const credentials1 = {
+  key: privateKey1,
+  cert: certificate1,
+  ca: ca1,
+};
+// Starting both http & https servers
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials1, app);
+
+httpServer.listen(80, () => {
+  console.log("HTTP Server running on port 80");
+});
+
+httpsServer.listen(443, () => {
+  console.log("HTTPS Server running on port 443");
 });
 
 const oEmail = new Email({
