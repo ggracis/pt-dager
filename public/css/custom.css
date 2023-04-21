@@ -109,8 +109,19 @@ h1:hover {
   z-index: 2;
 }
 
+.owl-item .oc-item {
+  color: #fff;
+  text-shadow: #000000 -0.05em 0.1em 0.4em;
+  transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
+  -webkit-transition: color 0.5s ease, text-shadow 0.5s ease,
+    transform 0.5s ease;
+  -moz-transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
+  -ms-transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
+  -o-transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
+}
 .owl-item .oc-item:hover {
-  box-shadow: 0 0.5em 0.5em -0.4em #ec008b80;
+  text-shadow: #000000 -0.05em 0.1em 0.4em;
+  color: #ec008b;
   transform: translateY(-0.75em);
   -webkit-transform: translateY(-0.75em);
   -moz-transform: translateY(-0.75em);
