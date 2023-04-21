@@ -110,7 +110,7 @@ h1:hover {
 }
 
 .owl-item .oc-item {
-  color: #fff;
+  color: #777777;
   text-shadow: #000000 -0.05em 0.1em 0.4em;
   transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
   -webkit-transition: color 0.5s ease, text-shadow 0.5s ease,
@@ -120,8 +120,8 @@ h1:hover {
   -o-transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
 }
 .owl-item .oc-item:hover {
-  text-shadow: #ec008b -0.05em 0.1em 0.4em;
-  color: #ec008b;
+  text-shadow: #ff71c4 -0.05em 0.1em 0.4em;
+  color: #ffffff;
   transform: translateY(-0.75em);
   -webkit-transform: translateY(-0.75em);
   -moz-transform: translateY(-0.75em);
