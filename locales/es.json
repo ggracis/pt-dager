@@ -1,13 +1,13 @@
 {
   "partials": {
-    "acerca": "partials/acerca-ES",
-    "header": "partials/header-ES",
-    "intro": "partials/intro-ES",
-    "proyectos": "partials/proyectos-ES",
-    "remate": "partials/remate-ES",
-    "skills": "partials/skills-ES",
-    "form-pc": "partials/form-pc-ES",
-    "form-celu": "partials/form-celu-ES"
+    "acerca": "partials/acerca-es",
+    "header": "partials/header-es",
+    "intro": "partials/intro-es",
+    "proyectos": "partials/proyectos-es",
+    "remate": "partials/remate-es",
+    "skills": "partials/skills-es",
+    "form-pc": "partials/form-pc-es",
+    "form-celu": "partials/form-celu-es"
   },
   "hello": "hola"
 }
