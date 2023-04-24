@@ -55,7 +55,7 @@
         <!-- #primary-menu end -->
 
         <!-- Primary Navigation
-                          ============================================= -->
+============================================= -->
         <nav class="primary-menu">
           <ul class="menu-container header-button">
             <li class="menu-item">
@@ -66,6 +66,14 @@
                 data-class="down-lg:px-1"
                 >Mi CV</a
               >
+            </li>
+            <li class="menu-item">
+              <a
+                href="/change-language/<%= currentLocale === 'en' ? 'es' : 'en' %>"
+                class="button ls-1 text-uppercase fw-semibold button-effect ml-2"
+              >
+                <%= currentLocale === 'en' ? 'Español' : 'English' %>
+              </a>
             </li>
           </ul>
         </nav>

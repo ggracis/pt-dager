@@ -1,0 +1,13 @@
+{
+  "partials": {
+    "acerca": "partials/acerca-EN",
+    "header": "partials/header-EN",
+    "intro": "partials/intro-EN",
+    "proyectos": "partials/proyectos-EN",
+    "remate": "partials/remate-EN",
+    "skills": "partials/skills-EN",
+    "form-pc": "partials/form-pc-EN",
+    "form-celu": "partials/form-celu-EN"
+  },
+  "hello": "hello"
+}

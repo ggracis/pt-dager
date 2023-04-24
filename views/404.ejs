@@ -1,10 +1,50 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= pageTitle %></title>
-  </head>
-  <body></body>
-</html>
+<%- include ("partials/head", {pageTitle: "Gastón Gracis 👨🏻‍💻"}) %>
+
+<body class="stretched">
+  <!-- Document Wrapper
+	============================================= -->
+  <div id="wrapper">
+    <%- include ("partials/header") %>
+    <!-- Contenido
+		============================================= -->
+    <section id="content" style="background-color: #000">
+      <div class="content-wrap pt-0" style="overflow: visible">
+        <!-- Acerca de mí
+				============================================= -->
+        <div
+          id="acerca-de-mi"
+          class="section page-section bg-transparent pt-0 mb-0"
+        >
+          <div class="container">
+            <div class="mb-5 dark">
+              <span class="display-4 fw-bold gradient-underline font-primary">
+                No hay nada aca - 404
+              </span>
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="row justify-content-around dark mb-4">
+              <div class="col-lg-6 col-md-4 col-sm-12">
+                <h4 class="font-body ls-1 text-uppercase">
+                  En su lugar te ofrezco ir a mi portfolio
+                </h4>
+                <button
+                  class="btn btn-outline-light mt-3"
+                  onclick="window.location.href = '/';"
+                >
+                  Ir al portfolio
+                </button>
+
+                <div class="clear"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- #Acerca de mí fin -->
+      </div>
+    </section>
+    <!-- #content end -->
+    <%- include ("partials/footer") %>
+  </div>
+</body>
