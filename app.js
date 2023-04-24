@@ -112,3 +112,33 @@ app.post("/contacto", (req, res, next) => {
   oEmail.enviarCorreo(correo);
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
+
+// Certificate for Domain 1
+const privateKey1 = fs.readFileSync(
+  "/etc/letsencrypt/live/www.gastongracis.dev/privkey.pem",
+  "utf8"
+);
+const certificate1 = fs.readFileSync(
+  "/etc/letsencrypt/live/www.gastongracis.dev/cert.pem",
+  "utf8"
+);
+const ca1 = fs.readFileSync(
+  "/etc/letsencrypt/live/www.gastongracis.dev/chain.pem",
+  "utf8"
+);
+const credentials1 = {
+  key: privateKey1,
+  cert: certificate1,
+  ca: ca1,
+};
+// Starting both http & https servers
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials1, app);
+
+httpServer.listen(80, () => {
+  console.log("HTTP Server running on port 80");
+});
+
+httpsServer.listen(443, () => {
+  console.log("HTTPS Server running on port 443");
+});
