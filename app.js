@@ -113,7 +113,7 @@ app.post("/contacto", (req, res, next) => {
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
 
-// Certificate for Domain 1
+/* // Certificate for Domain 1
 const privateKey1 = fs.readFileSync(
   "/etc/letsencrypt/live/www.gastongracis.dev/privkey.pem",
   "utf8"
@@ -142,3 +142,4 @@ httpServer.listen(80, () => {
 httpsServer.listen(443, () => {
   console.log("HTTPS Server running on port 443");
 });
+ */
