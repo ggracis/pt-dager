@@ -16,6 +16,13 @@
             ></span>
           </button>
         </div>
+        <a
+          class="idioma-celu displayCelu fw-bold font-primary text-uppercase text-white mt-2"
+          type="button"
+          href="/change-language/<%= currentLocale === 'en' ? 'es' : 'en' %>"
+        >
+          <%= currentLocale === 'en' ? 'Español' : 'English' %>
+        </a>
 
         <!-- Primary Navigation
                           ============================================= -->
@@ -67,7 +74,7 @@
                 >Mi CV</a
               >
             </li>
-            <li class="menu-item">
+            <li class="menu-item displayPc">
               <a
                 href="/change-language/<%= currentLocale === 'en' ? 'es' : 'en' %>"
                 class="button ls-1 text-uppercase fw-semibold button-effect ml-2"
@@ -81,6 +88,5 @@
       </div>
     </div>
   </div>
-  <div class="header-wrap-clone"></div>
 </header>
 <!-- #header end -->
