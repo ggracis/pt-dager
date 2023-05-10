@@ -11,6 +11,14 @@ const app = express();
 const path = require("path");
 const bodyParser = require("body-parser");
 
+var TicTacToeApp = require("./lib/tic_tac_toe_app");
+
+var input = ("" + process.argv[2]).toUpperCase().replace(/ /g, "-");
+var currentTurn = ("" + process.argv[3]).toUpperCase();
+var debug = ("" + process.argv[4]).toUpperCase() == "DEBUG";
+
+new TicTacToeApp(input, currentTurn, debug);
+
 // Configurar i18n
 i18n.configure({
   locales: ["es", "en"],
@@ -44,6 +52,30 @@ app.get("/change-language/:locale", (req, res) => {
   req.setLocale(locale);
   app.locals.currentLocale = locale;
   res.redirect("/");
+});
+
+app.get("/tateti", function (req, res) {
+  res.render("tateti");
+});
+
+const TicTacToeModel = require("./lib/tic_tac_toe_model");
+
+app.get("/api/tictactoe/:input/:currentTurn", (req, res) => {
+  const input = req.params.input.toUpperCase().replace(/ /g, "-");
+  const currentTurn = req.params.currentTurn.toUpperCase();
+  const model = new TicTacToeModel(input, currentTurn);
+  const recommendation = model.getRecommendation();
+  console.log(recommendation.index);
+  res.send(recommendation);
+});
+
+app.post("/api/tictactoe", (req, res) => {
+  const input = req.body.input.toUpperCase().replace(/ /g, "-");
+  const currentTurn = req.body.currentTurn.toUpperCase();
+  const model = new TicTacToeModel(input, currentTurn);
+  const recommendation = model.getRecommendation();
+  console.log(recommendation.index);
+  res.send(recommendation);
 });
 
 app.use((req, res, next) => {
@@ -113,7 +145,7 @@ app.post("/contacto", (req, res, next) => {
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
 
-/* // Certificate for Domain 1
+// Certificate for Domain 1
 const privateKey1 = fs.readFileSync(
   "/etc/letsencrypt/live/www.gastongracis.dev/privkey.pem",
   "utf8"
@@ -142,4 +174,3 @@ httpServer.listen(80, () => {
 httpsServer.listen(443, () => {
   console.log("HTTPS Server running on port 443");
 });
- */
