@@ -145,7 +145,7 @@ app.post("/contacto", (req, res, next) => {
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
 
-// Certificate for Domain 1
+// Lee los certificados SSL
 const privateKey1 = fs.readFileSync(
   "/etc/letsencrypt/live/www.gastongracis.dev/privkey.pem",
   "utf8"
@@ -158,19 +158,27 @@ const ca1 = fs.readFileSync(
   "/etc/letsencrypt/live/www.gastongracis.dev/chain.pem",
   "utf8"
 );
+
 const credentials1 = {
   key: privateKey1,
   cert: certificate1,
   ca: ca1,
 };
-// Starting both http & https servers
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials1, app);
 
-httpServer.listen(80, () => {
-  console.log("HTTP Server running on port 80");
-});
+// Crear el servidor HTTPS
+const httpsServer = https.createServer(credentials1, app);
 
 httpsServer.listen(443, () => {
   console.log("HTTPS Server running on port 443");
+});
+
+// Opcional: redirigir HTTP a HTTPS
+const http = require("http");
+const httpApp = express();
+httpApp.all("*", (req, res) => {
+  res.redirect(301, `https://${req.hostname}${req.url}`);
+});
+const httpServer = http.createServer(httpApp);
+httpServer.listen(80, () => {
+  console.log("HTTP Server running on port 80 and redirecting to HTTPS");
 });
