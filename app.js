@@ -144,25 +144,19 @@ app.post("/contacto", (req, res, next) => {
   oEmail.enviarCorreo(correo);
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
-
 // Lee los certificados SSL
-const privateKey1 = fs.readFileSync(
-  "/etc/letsencrypt/live/www.gastongracis.dev/privkey.pem",
+const privateKey = fs.readFileSync(
+  "/etc/letsencrypt/live/gastongracis.dev/privkey.pem",
   "utf8"
 );
-const certificate1 = fs.readFileSync(
-  "/etc/letsencrypt/live/www.gastongracis.dev/cert.pem",
-  "utf8"
-);
-const ca1 = fs.readFileSync(
-  "/etc/letsencrypt/live/www.gastongracis.dev/chain.pem",
+const certificate = fs.readFileSync(
+  "/etc/letsencrypt/live/gastongracis.dev/fullchain.pem",
   "utf8"
 );
 
-const credentials1 = {
-  key: privateKey1,
-  cert: certificate1,
-  ca: ca1,
+const credentials = {
+  key: privateKey,
+  cert: certificate,
 };
 
 // Crear el servidor HTTPS
