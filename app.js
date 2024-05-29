@@ -144,6 +144,8 @@ app.post("/contacto", (req, res, next) => {
   oEmail.enviarCorreo(correo);
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
+
+// Configuración de certificados SSL
 // Lee los certificados SSL
 const privateKey = fs.readFileSync(
   "/etc/letsencrypt/live/gastongracis.dev/privkey.pem",
@@ -160,14 +162,13 @@ const credentials = {
 };
 
 // Crear el servidor HTTPS
-const httpsServer = https.createServer(credentials1, app);
+const httpsServer = https.createServer(credentials, app); // Aquí estaba credentials1, lo he corregido a credentials
 
 httpsServer.listen(443, () => {
   console.log("HTTPS Server running on port 443");
 });
 
 // Opcional: redirigir HTTP a HTTPS
-const http = require("http");
 const httpApp = express();
 httpApp.all("*", (req, res) => {
   res.redirect(301, `https://${req.hostname}${req.url}`);
