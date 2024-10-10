@@ -9,6 +9,8 @@ const Email = require("./mailer");
 const TicTacToeApp = require("./lib/tic_tac_toe_app");
 const TicTacToeModel = require("./lib/tic_tac_toe_model");
 
+require("dotenv").config();
+
 const app = express();
 const PORT_HTTP = 3000; // Puerto para HTTP
 const PORT_HTTPS = 443; // Puerto para HTTPS
