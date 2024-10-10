@@ -1,5 +1,3 @@
-const express = require("express");
-const router = express.Router();
 const nodemailer = require("nodemailer");
 
 class Email {
@@ -15,19 +13,14 @@ class Email {
     });
   }
 
-  enviarCorreo(oEmail) {
+  async enviarCorreo(oEmail) {
     try {
-      this.transporter.sendMail(oEmail, (error, info) => {
-        if (error) {
-          console.log("Error al enviar el correo: " + error);
-        } else {
-          console.log("Correo enviado: " + info.response);
-        }
-        this.transporter.close();
-      });
-    } catch (x) {
-      console.log("Error al enviar el correo: " + x);
+      const info = await this.transporter.sendMail(oEmail);
+      console.log("Correo enviado: " + info.response);
+    } catch (error) {
+      console.error("Error al enviar el correo: ", error);
     }
   }
 }
+
 module.exports = Email;

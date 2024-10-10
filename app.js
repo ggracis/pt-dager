@@ -72,10 +72,6 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use((req, res, next) => {
-  res.status(404).render("404", { pageTitle: "Página no encontrada" });
-});
-
 // Configuramos el archivo donde se guardarán los datos
 const archivoContactos = path.join(__dirname, "public", "contactos.html");
 
@@ -98,8 +94,8 @@ const oEmail = new Email({
   },
 });
 
-app.post("/contacto", (req, res, next) => {
-  const { nombre, email, mensaje } = req.body; // Utilizamos destructuring para obtener las variables
+app.post("/contacto", async (req, res) => {
+  const { nombre, email, mensaje } = req.body;
   if (!nombre || !email || !mensaje) {
     return res
       .status(400)
@@ -124,8 +120,12 @@ app.post("/contacto", (req, res, next) => {
     `,
   };
 
-  oEmail.enviarCorreo(correo);
-  res.status(200).json({ message: "Mensaje enviado correctamente" });
+  try {
+    await oEmail.enviarCorreo(correo);
+    res.status(200).json({ message: "Mensaje enviado correctamente" });
+  } catch (error) {
+    res.status(500).json({ error: "Error al enviar el mensaje" });
+  }
 });
 
 // Configuración de certificados SSL
@@ -145,6 +145,13 @@ if (process.env.NODE_ENV === "production") {
     console.log(`Servidor HTTPS corriendo en el puerto ${PORT_HTTPS}`);
   });
 }
+
+//
+app.use((req, res, next) => {
+  console.log(`Ruta no encontrada: ${req.originalUrl}`);
+  res.status(404).render("404", { pageTitle: "Página no encontrada" });
+  res.status(404).send("Ruta no encontrada");
+});
 
 // Iniciar el servidor HTTP
 http.createServer(app).listen(PORT_HTTP, () => {
