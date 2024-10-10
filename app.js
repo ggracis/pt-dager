@@ -1,48 +1,36 @@
 const express = require("express");
 const https = require("https");
 const http = require("http");
-const axios = require("axios");
-const Email = require("./mailer");
 const fs = require("fs");
+const path = require("path");
 const i18n = require("i18n");
 const cookieParser = require("cookie-parser");
+const Email = require("./mailer");
+const TicTacToeApp = require("./lib/tic_tac_toe_app");
+const TicTacToeModel = require("./lib/tic_tac_toe_model");
 
 const app = express();
-const path = require("path");
-const bodyParser = require("body-parser");
+const PORT_HTTP = 3000; // Puerto para HTTP
+const PORT_HTTPS = 443; // Puerto para HTTPS
 
-var TicTacToeApp = require("./lib/tic_tac_toe_app");
-
-var input = ("" + process.argv[2]).toUpperCase().replace(/ /g, "-");
-var currentTurn = ("" + process.argv[3]).toUpperCase();
-var debug = ("" + process.argv[4]).toUpperCase() == "DEBUG";
-
-new TicTacToeApp(input, currentTurn, debug);
-
-// Configurar i18n
+// Configuración de i18n
 i18n.configure({
   locales: ["es", "en"],
-  directory: __dirname + "/locales",
+  directory: path.join(__dirname, "locales"),
   defaultLocale: "es",
   queryParameter: "lang",
 });
 
-// Agregar el middleware de i18n a la cadena de manejo de solicitudes
 app.use(cookieParser());
 app.use(i18n.init);
-
-app.use(function (req, res, next) {
-  res.locals.currentLocale = req.getLocale();
-  next();
-});
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.get("/", function (req, res) {
+// Rutas y lógica de la aplicación
+app.get("/", (req, res) => {
   res.render("index", { currentLocale: req.cookies.i18n || "es" });
 });
 
@@ -57,8 +45,6 @@ app.get("/change-language/:locale", (req, res) => {
 app.get("/tateti", function (req, res) {
   res.render("tateti");
 });
-
-const TicTacToeModel = require("./lib/tic_tac_toe_model");
 
 app.get("/api/tictactoe/:input/:currentTurn", (req, res) => {
   const input = req.params.input.toUpperCase().replace(/ /g, "-");
@@ -86,11 +72,6 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
   res.status(404).render("404", { pageTitle: "Página no encontrada" });
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Servidor iniciado en el puerto ${PORT}`);
 });
 
 // Configuramos el archivo donde se guardarán los datos
@@ -146,26 +127,26 @@ app.post("/contacto", (req, res, next) => {
 });
 
 // Configuración de certificados SSL
-// Lee los certificados SSL
-const privateKey = fs.readFileSync(
-  "/etc/letsencrypt/live/gastongracis.dev/privkey.pem",
-  "utf8"
-);
-const certificate = fs.readFileSync(
-  "/etc/letsencrypt/live/gastongracis.dev/fullchain.pem",
-  "utf8"
-);
+if (process.env.NODE_ENV === "production") {
+  const privateKey = fs.readFileSync(
+    "/etc/letsencrypt/live/gastongracis.dev/privkey.pem",
+    "utf8"
+  );
+  const certificate = fs.readFileSync(
+    "/etc/letsencrypt/live/gastongracis.dev/fullchain.pem",
+    "utf8"
+  );
+  const credentials = { key: privateKey, cert: certificate };
 
-const credentials = {
-  key: privateKey,
-  cert: certificate,
-};
+  // Crear el servidor HTTPS
+  https.createServer(credentials, app).listen(PORT_HTTPS, () => {
+    console.log(`Servidor HTTPS corriendo en el puerto ${PORT_HTTPS}`);
+  });
+}
 
-// Crear el servidor HTTPS
-const httpsServer = https.createServer(credentials, app); // Aquí estaba credentials1, lo he corregido a credentials
-
-httpsServer.listen(443, () => {
-  console.log("HTTPS Server running on port 443");
+// Iniciar el servidor HTTP
+http.createServer(app).listen(PORT_HTTP, () => {
+  console.log(`Servidor HTTP corriendo en el puerto ${PORT_HTTP}`);
 });
 
 // Opcional: redirigir HTTP a HTTPS
