@@ -97,16 +97,44 @@ h1:hover {
   color: #ec008b;
 }
 
+.top-image,
+.bottom-image {
+  position: relative;
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
 .top-image {
   z-index: 1;
+  animation: zoomIn 1s ease-out;
 }
 
 .bottom-image {
   z-index: 0;
+  filter: blur(1px);
+  transform: scale(0.95) translateZ(-50px);
 }
 
+.top-image:hover,
 .bottom-image:hover {
   z-index: 2;
+  transform: translateY(-10px) scale(1.03) translateZ(50px);
+  filter: blur(0);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes zoomIn {
+  from {
+    filter: blur(5px);
+    transform: translateY(30px) translateZ(-100px);
+  }
+  to {
+    filter: blur(0);
+    transform: translateY(0) translateZ(0);
+  }
 }
 
 .owl-item .oc-item {

@@ -1,73 +1,32 @@
-D:\xampp\htdocs\portfolio\public\images\proyectos\af
-D:\xampp\htdocs\portfolio\public\images\proyectos\afperu
-D:\xampp\htdocs\portfolio\public\images\proyectos\bellvilage
-D:\xampp\htdocs\portfolio\public\images\proyectos\camecultura
-D:\xampp\htdocs\portfolio\public\images\proyectos\chopin
-D:\xampp\htdocs\portfolio\public\images\proyectos\er
-D:\xampp\htdocs\portfolio\public\images\proyectos\er_revista
-D:\xampp\htdocs\portfolio\public\images\proyectos\goodpark
-D:\xampp\htdocs\portfolio\public\images\proyectos\libres
-D:\xampp\htdocs\portfolio\public\images\proyectos\lista.txt
-D:\xampp\htdocs\portfolio\public\images\proyectos\mccartney
-D:\xampp\htdocs\portfolio\public\images\proyectos\postularme
-D:\xampp\htdocs\portfolio\public\images\proyectos\prontoaccess
-D:\xampp\htdocs\portfolio\public\images\proyectos\rsds19
-D:\xampp\htdocs\portfolio\public\images\proyectos\rsds22
-D:\xampp\htdocs\portfolio\public\images\proyectos\secin
-D:\xampp\htdocs\portfolio\public\images\proyectos\sello
-D:\xampp\htdocs\portfolio\public\images\proyectos\soho
-D:\xampp\htdocs\portfolio\public\images\proyectos\sos
-D:\xampp\htdocs\portfolio\public\images\proyectos\usina
-D:\xampp\htdocs\portfolio\public\images\proyectos\af\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\af\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\af\r1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\af\r2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\afperu\0.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\afperu\01.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\bellvilage\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\bellvilage\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\bellvilage\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\camecultura\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\chopin\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\chopin\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\chopin\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\chopin\4.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\er\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\er\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\er\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\er_revista\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\er_revista\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\goodpark\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\goodpark\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\goodpark\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\libres\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\libres\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\libres\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\libres\4.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\mccartney\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\mccartney\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\postularme\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\prontoaccess\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\prontoaccess\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\prontoaccess\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\rsds19\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\rsds19\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\rsds22\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\rsds22\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\secin\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\secin\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\secin\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sello\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sello\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sello\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sello\4.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\soho\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\soho\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\soho\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\soho\4.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sos\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sos\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\sos\3.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\usina\1.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\usina\2.jpg
-D:\xampp\htdocs\portfolio\public\images\proyectos\usina\3.jpg
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\ahmc
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\brcame
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\chopinNext
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\darley
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\deckroll
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\esnav
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\kreativa
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\lista.txt
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\lopeztilli
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\ahmc\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\ahmc\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\ahmc\3.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\ahmc\4.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\brcame\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\brcame\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\brcame\3.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\chopinNext\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\chopinNext\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\chopinNext\3.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\darley\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\darley\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\deckroll\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\deckroll\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\deckroll\3.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\esnav\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\esnav\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\esnav\3.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\kreativa\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\kreativa\2.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\kreativa\3.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\lopeztilli\1.png
+D:\htdocs\portfolio\public\images\proyectos\Nueva carpeta\lopeztilli\2.png
