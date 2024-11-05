@@ -100,22 +100,31 @@ h1:hover {
 .top-image,
 .bottom-image {
   position: relative;
+
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   transform: translateY(0) scale(1);
   filter: blur(0);
   backface-visibility: hidden;
   perspective: 1000px;
+  -webkit-transform: translateY(0) scale(1);
+  -moz-transform: translateY(0) scale(1);
+  -ms-transform: translateY(0) scale(1);
+  -o-transform: translateY(0) scale(1);
 }
 
 .top-image {
   z-index: 1;
+  top: -2em !important;
   animation: zoomIn 1s ease-out;
 }
 
 .bottom-image {
+  position: absolute;
+  top: 12em !important;
   z-index: 0;
   filter: blur(1px);
   transform: scale(0.95) translateZ(-50px);
+  -webkit-filter: blur(1px);
 }
 
 .top-image:hover,

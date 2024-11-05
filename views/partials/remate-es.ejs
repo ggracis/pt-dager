@@ -9,29 +9,66 @@
       class="mx-auto schedule-wrap text-center dark rounded shadow-lg"
       style="max-width: 1050px; background-color: #000"
     >
-      <h3 class="gradient-text">
-        Como veras, soy una persona curiosa y me encanta aprender cosas nuevas
-        todo el tiempo.
-      </h3>
+      <h3 class="gradient-text">¿Tenés una idea? Charlemos</h3>
       <p class="mx-auto" style="max-width: 600px">
         ¿Estás buscando a alguien que pueda ayudar a hacer crecer tu proyecto?
         <br />¡Esa persona soy yo!<br />
-        Me encantaría saber más sobre tus necesidades y cómo puedo contribuir al
-        éxito de tu equipo.
       </p>
-      <a
-        href="#"
-        data-href="#contacto"
-        class="boton-contacto button ls-1 text-uppercase fw-semibold button-xlarge button-white button-gradient mt-4"
-        >Charlemos</a
-      >
+
+      <div class="form-widget" data-loader="button">
+        <div class="row">
+          <form id="form-contacto" method="POST" action="/contacto">
+            <div class="col-12 form-group">
+              <input
+                type="text"
+                name="nombre"
+                id="nombre"
+                class="form-control required form-control-md not-dark"
+                value=""
+                placeholder="Nombre*"
+                required="required"
+              />
+            </div>
+            <div class="col-12 form-group">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                class="form-control required form-control-md not-dark"
+                value=""
+                placeholder="Email*"
+                required="required"
+              />
+            </div>
+            <div class="col-12 form-group">
+              <textarea
+                id="mensaje"
+                name="mensaje"
+                class="form-control form-control-md not-dark"
+                placeholder="Escriba sus comentarios aquí"
+                required="required"
+              ></textarea>
+            </div>
+            <div class="col-12 form-group mb-0">
+              <div class="form-result" id="form-result"></div>
+              <button
+                type="submit"
+                id="enviar-formulario"
+                name="enviar-formulario"
+                class="botonEnviarForm button text-uppercase fw-semibold button-xlarge button-white button-gradient m-0"
+              >
+                Pongámonos en contacto
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </div>
   <div
     class="dotted-bg"
     style="
-      background: url('/demos/conference/images/dotted-bg.svg') repeat center
-        center / contain;
+      background: url('/images/dotted-bg.svg') repeat center center / contain;
       min-height: 25%;
       top: 90%;
       right: 0;

@@ -10,7 +10,6 @@
     <!-- Intro
 		============================================= -->
     <section
-      id="contacto"
       class="slider-element min-vh-60 min-vh-md-100 include-header"
       style="
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
@@ -22,7 +21,7 @@
           <div class="container dark py-5 py-md-0">
             <div class="row justify-content-between mt-5 col-mb-50">
               <%- include ("partials/intro-" + locals.currentLocale) %> <%-
-              include ("partials/form-pc-" + locals.currentLocale) %>
+              include ("partials/skills") %>
             </div>
           </div>
         </div>
@@ -34,23 +33,21 @@
 		============================================= -->
     <section id="content" style="background-color: #000">
       <div class="content-wrap pt-0" style="overflow: visible">
+        <!-- Skills -->
+
+        <div class="clear"></div>
+        <!-- Proyectos -->
+        <%- include ("partials/proyectos-" + locals.currentLocale) %>
+        <!-- Acerca de -->
+        <div class="clear"></div>
         <%- include("partials/acerca-" + locals.currentLocale) %>
 
         <div class="clear"></div>
 
-        <%- include ("partials/skills") %>
-
-        <div class="clear"></div>
-        <!-- Proyectos
-				============================================= -->
-        <%- include ("partials/proyectos-" + locals.currentLocale) %>
-        <!-- #Proyectos fin -->
-
-        <div class="clear"></div>
-
-        <%- include ("partials/remate-" + locals.currentLocale) %>
-
-        <div class="clear"></div>
+        <!-- Remate -->
+        <div id="contacto">
+          <%- include ("partials/remate-" + locals.currentLocale) %>
+        </div>
       </div>
     </section>
     <!-- #content end -->
