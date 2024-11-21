@@ -58,6 +58,10 @@ app.post("/contacto", async (req, res) => {
   res.status(200).json({ message: "Mensaje enviado correctamente" });
 });
 
+app.get("/lumberjack", (req, res) => {
+  res.render("lumberjack");
+});
+
 // Middleware para manejar 404
 app.use((req, res) => {
   res.status(404).render("404", { pageTitle: "Página no encontrada" });
