@@ -5,7 +5,7 @@ const i18n = require("i18n");
 const cookieParser = require("cookie-parser");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Configuración de i18n
 i18n.configure({
@@ -64,5 +64,5 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`Server is running on port ${PORT}`);
 });
