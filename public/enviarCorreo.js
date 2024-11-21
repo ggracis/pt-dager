@@ -1,85 +1,49 @@
-// Enviar formulario de contacto
 document.addEventListener("DOMContentLoaded", function () {
+  const enviarFormulario = (formPrefix = "") => {
+    const nombre = document.getElementById(`nombre${formPrefix}`).value;
+    const email = document.getElementById(`email${formPrefix}`).value;
+    const mensaje = document.getElementById(`mensaje${formPrefix}`).value;
+    const resultDiv = document.getElementById(`form-result${formPrefix}`);
+
+    if (!nombre || !email || !mensaje) {
+      resultDiv.innerHTML =
+        '<div class="alert alert-danger">Por favor, complete todos los campos</div>';
+      return;
+    }
+
+    fetch("/contacto", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ nombre, email, mensaje }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById(`nombre${formPrefix}`).value = "";
+        document.getElementById(`email${formPrefix}`).value = "";
+        document.getElementById(`mensaje${formPrefix}`).value = "";
+        resultDiv.innerHTML = `<div class="alert alert-success">${data.message}</div>`;
+      })
+      .catch((error) => {
+        resultDiv.innerHTML =
+          '<div class="alert alert-danger">Error al enviar el mensaje</div>';
+      });
+  };
+
+  // Formulario desktop
   document
     .getElementById("enviar-formulario")
-    .addEventListener("click", function (event) {
-      event.preventDefault(); // Evitar el envío del formulario por defecto
-      let nombre = document.getElementById("nombre").value;
-      let email = document.getElementById("email").value;
-      let mensaje = document.getElementById("mensaje").value;
+    ?.addEventListener("click", (e) => {
+      e.preventDefault();
+      enviarFormulario("");
+    });
 
-      if (!nombre || !email || !mensaje) {
-        document.getElementById("form-result").innerHTML =
-          '<div class="alert alert-danger">' +
-          "Por favor, complete todos los campos" +
-          "</div>";
-        return;
-      } else {
-        const data = {
-          nombre,
-          email,
-          mensaje,
-        };
-        axios
-          .post("/contacto", data)
-          .then(function (response) {
-            console.log(response);
-            document.getElementById("nombre").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("mensaje").value = "";
-            document.getElementById("form-result").innerHTML =
-              '<div class="alert alert-success">' +
-              response.data.message +
-              "</div>";
-          })
-          .catch(function (error) {
-            console.log(error);
-            document.getElementById("form-result").innerHTML =
-              '<div class="alert alert-danger">' +
-              "Error al enviar el mensaje" +
-              "</div>";
-          });
-      }
+  // Formulario móvil
+  document
+    .getElementById("enviar-formulario-celu")
+    ?.addEventListener("click", (e) => {
+      e.preventDefault();
+      enviarFormulario("-celu");
     });
 });
-
-// Enviar formulario de contacto desde Celu
-document
-  .getElementById("enviar-formulario-celu")
-  .addEventListener("click", function () {
-    let nombre = document.getElementById("nombre-celu").value;
-    let email = document.getElementById("email-celu").value;
-    let mensaje = document.getElementById("mensaje-celu").value;
-    if (!nombre || !email || !mensaje) {
-      document.getElementById("form-result-celu").innerHTML =
-        '<div class="alert alert-danger">' +
-        "Por favor, complete todos los campos" +
-        "</div>";
-      return;
-    } else {
-      const data = {
-        nombre,
-        email,
-        mensaje,
-      };
-      axios
-        .post("/contacto", data)
-        .then(function (response) {
-          console.log(response);
-          document.getElementById("nombre-celu").value = "";
-          document.getElementById("email-celu").value = "";
-          document.getElementById("mensaje-celu").value = "";
-          document.getElementById("form-result-celu").innerHTML =
-            '<div class="alert alert-success">' +
-            response.data.message +
-            "</div>";
-        })
-        .catch(function (error) {
-          console.log(error);
-          document.getElementById("form-result-celu").innerHTML =
-            '<div class="alert alert-danger">' +
-            "Error al enviar el mensaje" +
-            "</div>";
-        });
-    }
-  });

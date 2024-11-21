@@ -1,19 +1,19 @@
 {
-  "name": "portfolio",
+  "name": "dot-dager-portfolio",
   "version": "1.0.0",
-  "description": "Este es mi portfolio",
+  "description": "Dot Dager's Personal Portfolio",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "dev": "nodemon app.js"
   },
   "dependencies": {
-    "axios": "^1.7.7",
     "cookie-parser": "^1.4.7",
-    "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.21.1",
-    "fs": "^0.0.1-security",
-    "i18n": "^0.15.1",
-    "nodemailer": "^6.9.15"
+    "i18n": "^0.15.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
   }
 }

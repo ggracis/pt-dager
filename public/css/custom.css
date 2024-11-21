@@ -94,7 +94,7 @@ h1:hover {
 }
 
 .redes-sociales a:hover {
-  color: #ec008b;
+  color: #00ec53;
 }
 
 .top-image,
@@ -157,7 +157,7 @@ h1:hover {
   -o-transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s ease;
 }
 .owl-item .oc-item:hover {
-  text-shadow: #ff71c4 -0.05em 0.1em 0.4em;
+  text-shadow: #29d769 -0.05em 0.1em 0.4em;
   color: #ffffff;
   transform: translateY(-0.75em);
   -webkit-transform: translateY(-0.75em);

@@ -1,9 +1,9 @@
 :root {
   --cnvs-themecolor: #4c4c4c;
   --cnvs-themecolor-rgb: 34, 34, 34;
-  --cnvs-color1: #ec008b;
-  --cnvs-color2: #f3317a;
-  --cnvs-color3: #fb6567;
+  --cnvs-color1: #039b47;
+  --cnvs-color2: #31f34b;
+  --cnvs-color3: #65fb8d;
 
   --cnvs-body-font: "Roboto", sans-serif;
   --cnvs-primary-font: "Space Mono", monospace;
@@ -421,7 +421,7 @@ body,
     font-size: 14px;
   }
 
-  .about-img > div {
+  /* .about-img > div {
     position: absolute;
     top: 0;
     right: 0;
@@ -434,7 +434,7 @@ body,
     left: 0;
     right: auto;
     z-index: 0;
-  }
+  } */
 
   .schedule-wrap {
     padding: 70px 80px;
@@ -515,5 +515,22 @@ body,
 
   .menu-item > .button-effect::after {
     display: none;
+  }
+
+  .about-img {
+    display: block;
+    margin-bottom: 2em;
+  }
+
+  .about-img > div {
+    position: relative !important;
+    width: 100% !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+  }
+
+  .about-img > div + div {
+    margin-top: 1em;
   }
 }

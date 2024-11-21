@@ -1,5 +1,0 @@
-User-agent: *
-Sitemap: https://www.gastongracis.dev/sitemap.xml
-Disallow: /node_modules/
-Disallow: /contactos.html
-Allow: /
