@@ -1,51 +1,63 @@
-<%- include ("partials/head", {pageTitle: "Dot Dager 🥒"}) %>
+<%- include ("partials/head", {pageTitle: "404 - Dot Dager 🥒"}) %>
 
 <body class="stretched">
-  <!-- Document Wrapper
-	============================================= -->
+  <!-- Document Wrapper -->
   <div id="wrapper">
-    <!-- Contenido
-		============================================= -->
-    <section id="content" style="background-color: #000">
-      <div class="content-wrap pt-0" style="overflow: visible">
-        <!-- Acerca de mí
-				============================================= -->
-        <div
-          id="acerca-de-mi"
-          class="section page-section bg-transparent pt-0 mb-0"
-        >
-          <div class="container">
-            <div class="mb-5 dark mt-5 pt-5">
-              <span class="display-5 fw-bold gradient-underline font-primary">
-                No hay nada aca - 404 <br />
-                There is nothing here - 404
-              </span>
-            </div>
+    <!-- Content -->
+    <section
+      class="slider-element min-vh-60 min-vh-md-100 include-header"
+      style="
+        background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
+          url('/imgs/bg_2.png') no-repeat center center / cover;
+      "
+    >
+      <div class="slider-inner">
+        <div class="vertical-middle">
+          <div class="container dark py-5 py-md-0">
+            <div
+              class="row justify-content-center align-items-center text-center"
+            >
+              <div class="col-lg-6 col-md-8">
+                <div class="mb-5">
+                  <span
+                    class="display-4 fw-bold gradient-underline font-primary"
+                  >
+                    404
+                    <span class="h3 mt-2 d-block"
+                      >No hay nada acá<br />There is nothing here</span
+                    >
+                  </span>
+                </div>
 
-            <div class="clear"></div>
+                <div class="mb-5">
+                  <h4 class="font-body ls-3 text-uppercase mb-4">
+                    En su lugar te ofrezco ir a mi portfolio<br />
+                    <span class="opacity-50 text-white"
+                      >Instead, I offer you to go to my portfolio</span
+                    >
+                  </h4>
 
-            <div class="row justify-content-around dark mb-4">
-              <div class="col-lg-6 col-md-4 col-sm-12 text-center">
-                <h4 class="font-body ls-3 text-uppercase">
-                  En su lugar te ofrezco ir a mi portfolio <br />
-                  Instead, I offer you to go to my portfolio.
-                </h4>
-                <button
-                  class="button ls-1 text-uppercase fw-semibold button-xlarge button-white button-gradient mt-4"
-                  onclick="window.location.href = '/';"
-                >
-                  Ir al portfolio / Go to portfolio
-                </button>
-
-                <div class="clear"></div>
+                  <a
+                    href="/"
+                    class="button button-effect button-xxlarge text-uppercase"
+                  >
+                    Ir al portfolio / Go to portfolio
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <!-- #Acerca de mí fin -->
       </div>
     </section>
-    <!-- #content end -->
+
     <%- include ("partials/footer") %>
   </div>
+
+  <!-- Go To Top -->
+  <div id="gotoTop" class="uil uil-angle-up"></div>
+
+  <!-- JavaScripts -->
+  <script src="js/jquery.js"></script>
+  <script src="js/functions.js"></script>
 </body>
